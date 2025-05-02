@@ -2,13 +2,14 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import Message
 from config import BOT_TOKEN
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+import utils.keyboards as kb
 from commands.basic_cmd import register_basic_commands
-
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-register_basic_commands(dp)
 
+register_basic_commands(dp)
 
 @dp.message(Command("mozabook"))
 async def cmd_mozabook(message: Message):

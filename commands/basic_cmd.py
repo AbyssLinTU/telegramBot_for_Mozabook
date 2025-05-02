@@ -1,7 +1,7 @@
 from aiogram import Dispatcher
 from aiogram.types import Message
 from aiogram.filters import Command
-
+from utils.keyboards import main_menu
 
 async def start_cmd(message: Message):
     await message.answer(
@@ -9,7 +9,7 @@ async def start_cmd(message: Message):
         "Вот что я умею:\n"
         "/start - Начать работу\n"
         "/help - Помощь\n"
-        "/mozabook - Основы работы с Mozabook"
+        "/mozabook - Основы работы с Mozabook",reply_markup=main_menu
     )
 
 
