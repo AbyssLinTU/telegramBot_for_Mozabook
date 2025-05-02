@@ -2,31 +2,12 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import Message
 from config import BOT_TOKEN
+from commands.basic_cmd import register_basic_commands
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
-
-@dp.message(Command("start"))
-async def cmd_start(message: Message):
-    await message.answer(
-        "👋 Привет! Я бот для обучения работе с Mozabook.\n\n"
-        "Вот что я умею:\n"
-        "/start - Начать работу\n"
-        "/help - Помощь\n"
-        "/mozabook - Основы работы с Mozabook"
-    )
-
-
-@dp.message(Command("help"))
-async def cmd_help(message: Message):
-    await message.answer(
-        "📚 Доступные команды:\n\n"
-        "/start - Начать работу\n"
-        "/help - Показать это сообщение\n"
-        "/mozabook - Основы работы с Mozabook\n\n"
-        "Если у вас есть вопросы, используйте команду /mozabook"
-    )
+register_basic_commands(dp)
 
 
 @dp.message(Command("mozabook"))
