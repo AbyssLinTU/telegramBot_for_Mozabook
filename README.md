@@ -84,7 +84,7 @@ git branch -d feature-name
 ### Работа с удаленным репозиторием
 ```bash
 # Добавление удаленного репозитория
-git remote add origin https://github.com/username/repo.git
+git remote add origin https://github.com/AbyssLinTU/telegramBot_for_Mozabook.git
 
 # Отправка изменений
 git push origin main
@@ -94,7 +94,7 @@ git push origin feature-name
 git pull origin main
 
 # Клонирование репозитория
-git clone https://github.com/username/repo.git
+git clone https://github.com/AbyssLinTU/telegramBot_for_Mozabook.git
 ```
 
 ### Полезные команды
